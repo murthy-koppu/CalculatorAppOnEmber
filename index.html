@@ -1,62 +1,63 @@
-<!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Calculatorapponember by murthy-koppu</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Calculatorapponember</h1>
-        <p>Simple Calculator on Ember</p>
-
-        <p class="view"><a href="https://github.com/murthy-koppu/CalculatorAppOnEmber">View the Project on GitHub <small>murthy-koppu/CalculatorAppOnEmber</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/murthy-koppu/CalculatorAppOnEmber/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/murthy-koppu/CalculatorAppOnEmber/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/murthy-koppu/CalculatorAppOnEmber">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p></p>
-
-<p></p>
-    <pre><code>&lt;script data-require="jquery@2.0.3" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"&gt;&lt;/script&gt;
-&lt;script data-require="handlebars.js@1.0.0-rc.3" data-semver="1.3.0" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.js"&gt;&lt;/script&gt;
-&lt;script src="http://builds.emberjs.com/tags/v1.3.1/ember.prod.js"&gt;&lt;/script&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/ember-data.js/1.0.0-beta.5/ember-data.js"&gt;&lt;/script&gt;
-&lt;script src="app/app.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-&lt;script src="app/router.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-&lt;script src="app/controllers/calculator_controller.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-&lt;script type="text/x-handlebars"&gt;
-    &lt;div id="mainArea"&gt;
-        {{outlet}}
-    &lt;/div&gt;
-&lt;/script&gt;
-
-&lt;title&gt; Simple Calculator &lt;/title&gt;
-</code></pre>
-
-<p></p>
-
-<p></p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/murthy-koppu">murthy-koppu</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     
+    <script data-require="jquery@2.0.3" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="handlebars.js@1.0.0-rc.3" data-semver="1.3.0" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.js"></script>
+    <script src="http://builds.emberjs.com/tags/v1.3.1/ember.prod.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ember-data.js/1.0.0-beta.5/ember-data.js"></script>
+	<script src="app/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="app/router.js" type="text/javascript" charset="utf-8"></script>
+    <script src="app/controllers/calculator_controller.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/x-handlebars">
+        <div id="mainArea">
+            {{outlet}}
+        </div>
+    </script>
+        
+    <title> Simple Calculator </title>
+        
+  </head>
+
+  <body>
+  	 <script type="text/x-handlebars" id="calculator" data-template-name="calculator">
+    	<table border="2" class="calculatorTable">
+           <tbody>
+	    	<div id="screenDisplay">
+	    	  <tr>
+                 <td>
+	             	<input type="text" id="screen" name="screen" style="width:99%" {{bindAttr value="consoleValue"}}/>
+	             </td>
+              </tr>
+	        </div>
+	        <div id="calculatorApp">
+                <tr>
+                    <td class="buttons">
+                      <button {{action update 7}}>7</button>
+                      <button {{action update 8}}>8</button>
+                      <button {{action update 9}}>9</button>
+                      <button {{action update '+'}}>+</button>                     
+                      <br />
+					  <button {{action update 4}}>4</button>
+                      <button {{action update 5}}>5</button>
+                      <button {{action update 6}}>6</button>
+                      <button {{action update '-'}}>-</button>
+                      <br />
+                      <button {{action update 1}}>1</button>
+                      <button {{action update 2}}>2</button>
+                      <button {{action update 3}}>3</button>
+                      <button {{action update 'x'}}>x</button>
+                      <br />
+                      <button {{action update 'c'}}>c</button>
+                      <button {{action update 0}}>0</button>
+                      <button {{action update '='}}>=</button>
+                      <button {{action update '/'}}>/</button>
+                    </td>
+                 </tr>
+              </tbody>
+            </table>
+        </div>
+    </script>
   </body>
 </html>
