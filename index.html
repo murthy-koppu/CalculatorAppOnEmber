@@ -16,12 +16,7 @@
         </div>
     </script>
         
-    <title> Simple Calculator </title>
-        
-  </head>
-
-  <body>
-  	 <script type="text/x-handlebars" id="calculator" data-template-name="calculator">
+    <script type="text/x-handlebars" id="calculator" data-template-name="calculator">
     	<table border="2" class="calculatorTable">
            <tbody>
 	    	<div id="screenDisplay">
@@ -49,7 +44,7 @@
                       <button {{action update 3}}>3</button>
                       <button {{action update 'x'}}>x</button>
                       <br />
-                      <button {{action update 'c'}}>c</button>
+                      <button {{action update 'C'}}>C</button>
                       <button {{action update 0}}>0</button>
                       <button {{action update '='}}>=</button>
                       <button {{action update '/'}}>/</button>
@@ -59,5 +54,12 @@
             </table>
         </div>
     </script>
+        
+    <title> Simple Calculator </title>
+        
+  </head>
+
+  <body>
+  	 
   </body>
 </html>
