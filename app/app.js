@@ -1,0 +1,1 @@
+EME = Ember.Application.create({});

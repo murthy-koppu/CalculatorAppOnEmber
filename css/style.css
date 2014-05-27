@@ -1,0 +1,14 @@
+table.calculatorTable{
+	width:130px;
+}
+table.calculatorTable button{
+	width:25px;
+}
+
+table.calculatorTable td{
+	padding-left: 2px;
+}
+
+table.calculatorTable td.buttons{
+	padding-left: 5px;
+}

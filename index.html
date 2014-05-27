@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script data-require="jquery@2.0.3" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="handlebars.js@1.0.0-rc.3" data-semver="1.3.0" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.js"></script>
+    <script src="http://builds.emberjs.com/tags/v1.3.1/ember.prod.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ember-data.js/1.0.0-beta.5/ember-data.js"></script>
+	<script src="app/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="app/router.js" type="text/javascript" charset="utf-8"></script>
+    <script src="app/controllers/calculator_controller.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/x-handlebars">
+        <div id="mainArea">
+            {{outlet}}
+        </div>
+    </script>
+        
+    <title> Simple Calculator </title>
+        
+  </head>
+
+  <body>
+  	 <script type="text/x-handlebars" id="calculator" data-template-name="calculator">
+    	<table border="2" class="calculatorTable">
+           <tbody>
+	    	<div id="screenDisplay">
+	    	  <tr>
+                 <td>
+	             	<input type="text" id="screen" name="screen" style="width:99%" {{bindAttr value="consoleValue"}}/>
+	             </td>
+              </tr>
+	        </div>
+	        <div id="calculatorApp">
+                <tr>
+                    <td class="buttons">
+                      <button {{action update 7}}>7</button>
+                      <button {{action update 8}}>8</button>
+                      <button {{action update 9}}>9</button>
+                      <button {{action update '+'}}>+</button>                     
+                      <br />
+					  <button {{action update 4}}>4</button>
+                      <button {{action update 5}}>5</button>
+                      <button {{action update 6}}>6</button>
+                      <button {{action update '-'}}>-</button>
+                      <br />
+                      <button {{action update 1}}>1</button>
+                      <button {{action update 2}}>2</button>
+                      <button {{action update 3}}>3</button>
+                      <button {{action update 'x'}}>x</button>
+                      <br />
+                      <button {{action update 'c'}}>c</button>
+                      <button {{action update 0}}>0</button>
+                      <button {{action update '='}}>=</button>
+                      <button {{action update '/'}}>/</button>
+                    </td>
+                 </tr>
+              </tbody>
+            </table>
+        </div>
+    </script>
+  </body>
+</html>
